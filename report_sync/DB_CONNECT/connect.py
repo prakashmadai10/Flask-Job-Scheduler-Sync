@@ -9,9 +9,9 @@ class DBECC:
         self.cur = None
 
     def connect(self):
-        self.conn = cx_Oracle.connect("abc/abc@192.220.1.90:999/test")
+        #test-SSID,username-abc ,password:abc1
+        self.conn = cx_Oracle.connect("abc/abc1@192.220.1.90:999/test")
         self.cur = self.conn.cursor()
-        # self.cur.execute("ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD'")
     def close(self):
         self.conn.close()
 
@@ -21,7 +21,7 @@ class DBIPS:
         self.cur = None
 
     def connect(self):
-        self.conn = cx_Oracle.connect("abc/abc@192.220.1.90:999/test")
+        self.conn = cx_Oracle.connect("abc/abc1@192.220.1.90:999/test")
         self.cur = self.conn.cursor()
     def close(self):
         self.conn.close()
