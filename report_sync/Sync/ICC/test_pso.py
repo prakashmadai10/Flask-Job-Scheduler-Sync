@@ -1,9 +1,9 @@
 import pandas as pd
 from datetime import datetime
-from DB_CONNECT.connect import DBECC,DBCRM
+from DB_CONNECT.connect import MSSQLSEVER_CONNECT,Oracleconnect
 
 def ecc_pso_fetch():
-    db = DBECC()
+    db = Oracleconnect()
     sql = """ select query """
     db.connect()
     result = db.cur.execute(sql)
@@ -12,7 +12,7 @@ def ecc_pso_fetch():
     return result2
 
 def ecc_pso_insert(res):
-    db1=DBCRM()
+    db1=MSSQLSEVER_CONNECT()
     db1.connect()
 
     for row in res:
