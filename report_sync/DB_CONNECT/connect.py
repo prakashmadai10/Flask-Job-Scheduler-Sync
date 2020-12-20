@@ -3,7 +3,7 @@ import psycopg2
 import pyodbc
 import sqlalchemy
 import urllib
-class DBECC:
+class Oracleconnect:
     def __init__(self):
         self.conn = None
         self.cur = None
@@ -15,20 +15,7 @@ class DBECC:
     def close(self):
         self.conn.close()
 
-class DBIPS:
-    def __init__(self):
-        self.conn = None
-        self.cur = None
-
-    def connect(self):
-        self.conn = cx_Oracle.connect("abc/abc1@192.220.1.90:999/test")
-        self.cur = self.conn.cursor()
-    def close(self):
-        self.conn.close()
-
-
-
-class DBCIPS:
+class postgresql_connect:
     def  __init__(self):
         self.conn = None
         self.cur = None
@@ -42,7 +29,7 @@ class DBCIPS:
         self.conn.close()
 
 
-class DBCRM:
+class MSSQLSEVER_CONNECT:
     def  __init__(self):
         self.conn = None
         self.cur = None
